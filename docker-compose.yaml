@@ -9,6 +9,7 @@ services:
     networks:
       - mgmt
     volumes:
+      # replace with your own path  "xxxx:/docs"
       - "/home/workspace/project/kiga-doc:/docs"
     command: serve
 
