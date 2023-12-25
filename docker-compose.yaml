@@ -1,0 +1,16 @@
+version: "3"
+services:
+  docs:
+    restart: always
+    image:  sujaykumarh/docsify:latest
+    ports:
+      - 4000:3000
+    working_dir: /docs
+    networks:
+      - mgmt
+    volumes:
+      - "/home/workspace/project/kiga-doc:/docs"
+    command: serve
+
+networks:
+  mgmt: 
